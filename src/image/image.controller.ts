@@ -9,9 +9,7 @@ export class ImageController {
 
   @Post()
   @ApiBody({ type: CreateImageDto })
-  async createImage(@Body() image: CreateImageDto) {
-    console.log(image.url);
-
+  async createImage(@Body() image: CreateImageDto): Promise<string> {
     return await this.imageService.uploadImageFromUrl(image.url);
   }
 }

@@ -22,17 +22,6 @@ export class ImageService {
   async uploadImageFromUrl(url: string): Promise<any> {
     const hashUrl = await this.getUniqueHashUrl();
 
-    // upload image to cloudflare
-    //  --form 'url=https://[user:password@]example.com/<PATH_TO_IMAGE>' \
-    //  --form 'metadata={"key":"value"}' \
-    //  --form 'requireSignedURLs=false'
-
-    // use x-www-form-urlencoded
-    // const formUrl = new URLSearchParams();
-    // formUrl.append('url', url);
-    // formUrl.append('requireSignedURLs', 'false');
-    // formUrl.append('id', hashUrl);
-
     // import formdata with nodejs
     const frm = new FormData();
     frm.append('url', url);
@@ -56,13 +45,13 @@ export class ImageService {
         throw new Error('Could not upload image to cloudflare');
       });
 
-    console.log(response.data);
-
     // add hash url to cache
     const cacheKey = 'cfimage:url';
     await this.redisClient.sadd(cacheKey, hashUrl);
 
-    return response.data;
+    const imageUrl = `https://cdn.haenu.com/cdn-cgi/imagedelivery/lR-z0ff8FVe1ydEi9nc-5Q/${hashUrl}/public`;
+
+    return imageUrl;
   }
 
   async getUniqueHashUrl() {
