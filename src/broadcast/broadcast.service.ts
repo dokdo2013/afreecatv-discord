@@ -10,6 +10,7 @@ import { SendDto } from './send.dto';
 import { WebhookDto } from './webhook.dto';
 import { BroadcastInfo } from './broadcast-info.dto';
 import { ConfigService } from '@nestjs/config';
+import { ImageService } from 'src/image/image.service';
 
 @Injectable()
 export class BroadcastService {
@@ -18,6 +19,7 @@ export class BroadcastService {
   constructor(
     @InjectRedis() private readonly redisClient: Redis,
     private readonly configService: ConfigService,
+    private readonly imageService: ImageService,
   ) {
     this.client = ClientProxyFactory.create({
       transport: Transport.REDIS,
@@ -120,12 +122,17 @@ export class BroadcastService {
           continue;
         }
 
+        // 방송 이미지를 클라우드플레어에 올리고 링크 가져오기
+        const broadcastImage = await this.imageService.uploadImageFromUrl(
+          `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
+        );
+
         // 방송 시작 알림
         const message: SendDto = {
           webhook_url: alert_data.webhook_url,
           broadcast_id: broadNo,
           broadcast_title: broadTitle,
-          broadcast_image: `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
+          broadcast_image: broadcastImage,
           broadcaster_id: userId,
           broadcaster_name: broadcastInfo.userData.userNick,
           broadcaster_image: broadcastInfo.userData.profileImage,
