@@ -8,6 +8,11 @@ export class CronService {
 
   @Cron('45 * * * * *')
   handleCron() {
+    // if environment variable 'DEV_MODE' is set to 'true', then don't use cron
+    if (process.env.DEV_MODE === 'true') {
+      console.log('DEV_MODE is on, not using cronjob');
+      return;
+    }
     this.broadcastService.broadcastChecker();
   }
 }
