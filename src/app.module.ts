@@ -7,6 +7,11 @@ import { RavenInterceptor, RavenModule } from 'nest-raven';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ApiOutputInterceptor } from './common/api-response.interceptor';
+import { ScheduleModule } from '@nestjs/schedule';
+import { BroadcastModule } from './broadcast/broadcast.module';
+import { CronModule } from './cron/cron.module';
+import { AuthModule } from './auth/auth.module';
+import { ImageModule } from './image/image.module';
 
 @Module({
   imports: [
@@ -27,8 +32,11 @@ import { ApiOutputInterceptor } from './common/api-response.interceptor';
         url: `redis://${process.env.REDIS_HOST}:${process.env.REDIS_PORT}`,
       },
     }),
-
-    RavenModule,
+    ScheduleModule.forRoot(),
+    BroadcastModule,
+    CronModule,
+    AuthModule,
+    ImageModule,
   ],
   controllers: [AppController],
   providers: [
@@ -37,17 +45,17 @@ import { ApiOutputInterceptor } from './common/api-response.interceptor';
       provide: APP_INTERCEPTOR,
       useClass: ApiOutputInterceptor,
     },
-    {
-      provide: APP_INTERCEPTOR,
-      useValue: new RavenInterceptor({
-        filters: [
-          {
-            type: HttpException,
-            filter: (exception: HttpException) => 400 > exception.getStatus(),
-          },
-        ],
-      }),
-    },
+    // {
+    //   provide: APP_INTERCEPTOR,
+    //   useValue: new RavenInterceptor({
+    //     filters: [
+    //       {
+    //         type: HttpException,
+    //         filter: (exception: HttpException) => 400 > exception.getStatus(),
+    //       },
+    //     ],
+    //   }),
+    // },
   ],
 })
 export class AppModule {}
