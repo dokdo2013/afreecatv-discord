@@ -136,7 +136,7 @@ export class BroadcastService {
           webhook_url: alert_data.webhook_url,
           broadcast_id: broadNo,
           broadcast_title: broadTitle,
-          broadcast_image: broadcastImage,
+          broadcast_image: `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
           broadcaster_id: userId,
           broadcaster_name: broadcastInfo.userData.userNick,
           broadcaster_image: broadcastInfo.userData.profileImage,
