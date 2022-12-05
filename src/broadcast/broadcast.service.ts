@@ -272,14 +272,12 @@ export class BroadcastService {
         },
       })
       .then((res) => {
-        console.log(`triggerTwapi success - ${data.userData.userId}`);
         console.log(res.data);
 
         return res.data;
       })
       .catch((err) => {
-        console.log(`triggerTwapi error - ${data.userData.userId}`);
-        console.log(err.response.data);
+        console.error(err.response.data);
 
         return err.response.data;
       });
