@@ -239,7 +239,7 @@ export class BroadcastService {
   }
 
   async triggerTwapi(data: BroadcastInfo, broadcastImage: string) {
-    const endpoint = `${this.configService.get('TWAPI_URL')}/trigger`;
+    const endpoint = 'https://twapi.haenu.com/trigger';
     const apiKey = this.configService.get('TMI_API_SECRET');
 
     const apiData: TwapiDto = {
@@ -265,7 +265,7 @@ export class BroadcastService {
     };
 
     const res = await axios
-      .post(endpoint, apiData, {
+      .post(endpoint, JSON.stringify(apiData), {
         headers: {
           'Content-Type': 'application/json',
           Authorization: apiKey,
