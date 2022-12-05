@@ -115,6 +115,14 @@ export class BroadcastService {
           alert_data,
         );
 
+        // 방송 이미지를 클라우드플레어에 올리고 링크 가져오기
+        const broadcastImage = await this.imageService.uploadImageFromUrl(
+          `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
+        );
+
+        // twapi 서버로 메시지 전송
+        await this.triggerTwapi(broadcastInfo, broadcastImage);
+
         // 알림 정보 없는 경우
         if (!alert_data) {
           console.log(
@@ -122,11 +130,6 @@ export class BroadcastService {
           );
           continue;
         }
-
-        // 방송 이미지를 클라우드플레어에 올리고 링크 가져오기
-        const broadcastImage = await this.imageService.uploadImageFromUrl(
-          `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
-        );
 
         // 방송 시작 알림
         const message: SendDto = {
