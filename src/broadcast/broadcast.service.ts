@@ -143,10 +143,10 @@ export class BroadcastService {
         };
         console.log(`broadcastChecker check ${i + 1} - ${userId} send message`);
 
+        this.publish(message);
+
         // twapi 서버로 메시지 전송
         await this.triggerTwapi(broadcastInfo, broadcastImage);
-
-        this.publish(message);
       } else {
         // 방송 중인 경우
         console.log(
@@ -272,9 +272,15 @@ export class BroadcastService {
         },
       })
       .then((res) => {
+        console.log(`triggerTwapi success - ${data.userData.userId}`);
+        console.log(res.data);
+
         return res.data;
       })
       .catch((err) => {
+        console.log(`triggerTwapi error - ${data.userData.userId}`);
+        console.log(err.response.data);
+
         return err.response.data;
       });
 
