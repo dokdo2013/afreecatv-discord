@@ -11,6 +11,7 @@ import { WebhookDto } from './webhook.dto';
 import { BroadcastInfo } from './broadcast-info.dto';
 import { ConfigService } from '@nestjs/config';
 import { ImageService } from 'src/image/image.service';
+import { TwapiDto } from './twapi.dto';
 
 @Injectable()
 export class BroadcastService {
@@ -142,6 +143,9 @@ export class BroadcastService {
         };
         console.log(`broadcastChecker check ${i + 1} - ${userId} send message`);
 
+        // twapi 서버로 메시지 전송
+        await this.triggerTwapi(broadcastInfo, broadcastImage);
+
         this.publish(message);
       } else {
         // 방송 중인 경우
@@ -232,5 +236,48 @@ export class BroadcastService {
         },
       };
     }
+  }
+
+  async triggerTwapi(data: BroadcastInfo, broadcastImage: string) {
+    const endpoint = this.configService.get('TWAPI_URL');
+    const apiKey = this.configService.get('TMI_API_SECRET');
+
+    const apiData: TwapiDto = {
+      event: {
+        stream: {
+          id: data.broadcastData.broadNo.toString(),
+          title: data.broadcastData.broadTitle,
+          started_at: data.broadcastData.broadDatetime,
+          viewer_count: data.broadcastData.currentSumViewer.toString(),
+          thumbnail_url: broadcastImage,
+          game_name: 'AfreecaTV',
+        },
+        user: {
+          display_name: data.userData.userNick,
+          login: data.userData.userId,
+          profile_image_url: data.userData.profileImage,
+          offline_image_url: '',
+        },
+      },
+      subscription: {
+        id: `afd-${data.userData.userId}`,
+      },
+    };
+
+    const res = await axios
+      .post(endpoint, apiData, {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: apiKey,
+        },
+      })
+      .then((res) => {
+        return res.data;
+      })
+      .catch((err) => {
+        return err.response.data;
+      });
+
+    return res;
   }
 }
