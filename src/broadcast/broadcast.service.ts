@@ -239,7 +239,7 @@ export class BroadcastService {
   }
 
   async triggerTwapi(data: BroadcastInfo, broadcastImage: string) {
-    const endpoint = this.configService.get('TWAPI_URL');
+    const endpoint = `${this.configService.get('TWAPI_URL')}/trigger`;
     const apiKey = this.configService.get('TMI_API_SECRET');
 
     const apiData: TwapiDto = {
