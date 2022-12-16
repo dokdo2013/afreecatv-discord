@@ -4163,10 +4163,10 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-nest-raven@9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/nest-raven/-/nest-raven-9.0.0.tgz#3a99264ebcb1a66158d348e9606b476bac692561"
-  integrity sha512-Pa+rR6cVMk9E33SIC8Uey3VWFLSERhxs2Rc0d4qZBvSHCyjYMx43EAZAwD0uvJMoydkYWEbhoF96lw5SPDtaaA==
+nest-raven@9.1.0:
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/nest-raven/-/nest-raven-9.1.0.tgz#7f7497d44432e11dc9114ab66d0435344a986015"
+  integrity sha512-/w30VwCVWWQpAX5T1NZilGR09V2aEcL9PB1RYb9HXYqUACqS5NnIIW83tFYx4IcvGvQrFAWbkz6SiHgC94yVSw==
   optionalDependencies:
     "@nestjs/apollo" "^10.0.0"
     "@nestjs/graphql" "^10.0.0"
