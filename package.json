@@ -47,7 +47,7 @@
     "sequelize-typescript": "2.1.5"
   },
   "devDependencies": {
-    "@nestjs/cli": "9.1.7",
+    "@nestjs/cli": "9.1.8",
     "@nestjs/schematics": "9.0.4",
     "@nestjs/testing": "9.2.1",
     "@types/cron": "^2.0.0",
