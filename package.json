@@ -34,7 +34,7 @@
     "@sentry/node": "7.33.0",
     "@sentry/tracing": "7.33.0",
     "@types/sequelize": "4.28.14",
-    "axios": "1.2.3",
+    "axios": "1.2.4",
     "ioredis": "5.2.5",
     "jsonwebtoken": "^8.5.1",
     "mariadb": "3.0.2",
