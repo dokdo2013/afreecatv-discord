@@ -796,10 +796,10 @@
     webpack "5.75.0"
     webpack-node-externals "3.0.0"
 
-"@nestjs/common@9.3.6":
-  version "9.3.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-9.3.6.tgz#be61508710c0aaf613e19c84e064797a7918171b"
-  integrity sha512-pPZwSEfLkMDUun6TXVmfAaohUEXLDbvOQPoIuj4n5Dc/L0czKmgfbK22XLVo5pJaEW1my9ifBTEo1bUgSrWBxw==
+"@nestjs/common@9.3.7":
+  version "9.3.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-9.3.7.tgz#83096f292ff16aadf1982077b44ad20cb2e7372d"
+  integrity sha512-7hwY2lIkmB+K8wPSP9T8auzKPSlO15Gzujl3/ZxLX9SBt6B7N5Niv5E+5AzOcfL+h2X8JGysMG620hiGbUsT9A==
   dependencies:
     uid "2.0.1"
     iterare "1.2.1"
@@ -815,10 +815,10 @@
     lodash "4.17.21"
     uuid "9.0.0"
 
-"@nestjs/core@9.3.6":
-  version "9.3.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-9.3.6.tgz#e7a0cc6cc4ae00c9b4d650758cc624ba5457dea8"
-  integrity sha512-vWwgc8QaEGu5csSEnD5LiAXNKgeVR/rOvOev7BzSodAqvhOw4cmlr5UI1LijVgYDSr8hJjJmQUXkx8IU2m2gWw==
+"@nestjs/core@9.3.7":
+  version "9.3.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-9.3.7.tgz#381856108cfbf69ec37dc8a77ec38ebf690815f3"
+  integrity sha512-FXGVivZiujZl1aJF6jdPpg1XnLKp7kDhVGhWhJtnpv2IW/cz/YQHD2uMz/o+GZ9TCZxsGlxg79jbcuJITG11iQ==
   dependencies:
     uid "2.0.1"
     "@nuxtjs/opencollective" "0.3.2"
@@ -865,10 +865,10 @@
     iterare "1.2.1"
     tslib "2.4.1"
 
-"@nestjs/platform-express@9.3.6":
-  version "9.3.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-9.3.6.tgz#1121068c314405c0eab3170a06ee99651e0647ad"
-  integrity sha512-zS7xZmB4DLvcFima9zliF4W5TXOcS/cCJjioWpcdPDh3tsdlhDCkEecrFLveBj1drYKr87snQ2cwrHK5E9DlxA==
+"@nestjs/platform-express@9.3.7":
+  version "9.3.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-express/-/platform-express-9.3.7.tgz#c1677d2e4ff2d6c8d57c46b3a8c745351bc9fd14"
+  integrity sha512-/Qa3lXsDg66T4/eBLUWOriPuk+oYBRcEMbQ0FqNXpuxHNO0CepOTMjw5zq1ewfusAhAmasadjBGQFbXNX1u+Fw==
   dependencies:
     body-parser "1.20.1"
     cors "2.8.5"
@@ -924,10 +924,10 @@
     path-to-regexp "3.2.0"
     swagger-ui-dist "4.15.5"
 
-"@nestjs/testing@9.3.6":
-  version "9.3.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-9.3.6.tgz#52d99b6d0353d5bceaa74a39f5e6d566e6f5d585"
-  integrity sha512-bfdw+x87gp2gZEKYnOqQn976ficHPaYgDcj7OCbfSzj31CWCo+sL+FuyhtbjpmvwtddtL+GuLDFyDrbH9UK72A==
+"@nestjs/testing@9.3.7":
+  version "9.3.7"
+  resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-9.3.7.tgz#2b1c4cec9633fdc6bc044a8d9a5512e0911e24b9"
+  integrity sha512-tNJuNYfDXMJzTgQXRwnQtLdd7PIIqrSsZ//TP/wnqPnbUpTkWMCSK5exWfPWvdyS8P3Fy2wy5hNj8Rvp9+KvYw==
   dependencies:
     tslib "2.5.0"
 
