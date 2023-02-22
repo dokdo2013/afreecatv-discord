@@ -148,6 +148,24 @@ export class BroadcastService {
 
         this.publish(message);
 
+        if (alert_data.webhook_url2) {
+          const message2: SendDto = {
+            webhook_url: alert_data.webhook_url2,
+            broadcast_id: broadNo,
+            broadcast_title: broadTitle,
+            broadcast_image: `https://liveimg.afreecatv.com/h/${broadNo}.webp`,
+            broadcaster_id: userId,
+            broadcaster_name: broadcastInfo.userData.userNick,
+            broadcaster_image: broadcastInfo.userData.profileImage,
+            alert_message: alert_data.alert_message,
+            sender_name: alert_data.sender_name,
+            sender_image: alert_data.sender_image,
+          };
+          console.log(`broadcastChecker check ${i + 1} - ${userId} send message`);
+  
+          this.publish(message2);
+        }
+
         // twapi 서버로 메시지 전송
         await this.triggerTwapi(broadcastInfo, broadcastImage);
       } else {

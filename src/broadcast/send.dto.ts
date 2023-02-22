@@ -9,4 +9,5 @@ export class SendDto {
   alert_message: string;
   sender_name: string;
   sender_image: string;
+  webhook_url2?: string;
 }
