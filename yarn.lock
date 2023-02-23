@@ -4847,10 +4847,10 @@ sequelize-typescript@2.1.5:
   dependencies:
     glob "7.2.0"
 
-sequelize@6.28.1:
-  version "6.28.1"
-  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.28.1.tgz#67d52edc63c0f697d793b2c897248e0d1ce44252"
-  integrity sha512-5595Wq9zjHrQaNMr+tYg33Cw1AcBnOySvGIfNdjoqH9PeT+v6TWem5JIkAyWkIjZMM7dDkUASteRbe4xvbpLVA==
+sequelize@6.28.2:
+  version "6.28.2"
+  resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-6.28.2.tgz#adf42c4f4532a1c41bccdd98e8344798f678d273"
+  integrity sha512-MpK2h7xXHhBcwyTDf1sM1mrDdKFTGYbmrAC+4bJAf6f9Tp2IuiNwbNPj6Q5rMGVsKnO0CiJm8PEKtyNLOY8rNg==
   dependencies:
     "@types/debug" "^4.1.7"
     "@types/validator" "^13.7.1"
