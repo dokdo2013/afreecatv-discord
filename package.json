@@ -28,7 +28,7 @@
     "@nestjs/microservices": "^9.2.1",
     "@nestjs/platform-express": "9.3.12",
     "@nestjs/schedule": "^2.1.0",
-    "@nestjs/sequelize": "9.0.0",
+    "@nestjs/sequelize": "9.0.2",
     "@nestjs/swagger": "6.3.0",
     "@sentry/minimal": "6.19.7",
     "@sentry/node": "7.46.0",
