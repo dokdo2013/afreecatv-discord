@@ -42,7 +42,7 @@
     "nest-raven": "9.2.0",
     "reflect-metadata": "0.1.13",
     "rimraf": "3.0.2",
-    "rxjs": "7.8.0",
+    "rxjs": "7.8.1",
     "sequelize": "6.31.0",
     "sequelize-typescript": "2.1.5"
   },
