@@ -1329,10 +1329,10 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.3.12.tgz#920447fdd78d76b19de0438b7f60df3c4a80bf1c"
   integrity sha512-WwA1MW0++RfXmCr12xeYOOC5baSC9mSb0ZqCquFzKhcoF4TvHu5MKOuXsncgZcpVFhB1pXd5hZmM0ryAoCp12A==
 
-"@types/sequelize@4.28.14":
-  version "4.28.14"
-  resolved "https://registry.yarnpkg.com/@types/sequelize/-/sequelize-4.28.14.tgz#70302689ddef09f5d472b548a14e5a150e690aff"
-  integrity sha512-O8lTJ8YPVVaoY9xjduchDlo0MOS3w262pro2H1QMuFIo/kc/p1elP/UxLOTP2wcVO2cFd6Gvghg9ZSAiJi0GLA==
+"@types/sequelize@4.28.15":
+  version "4.28.15"
+  resolved "https://registry.yarnpkg.com/@types/sequelize/-/sequelize-4.28.15.tgz#1f5f5fe641be2fea26495db00a0fd9117147020e"
+  integrity sha512-DlwOs4Dz2s+bDlL4RFxl5mJZJC2r1Z7/hlTPIF0JF1RciivH120yEQF0gYQI9NXd3+KJOmvFyScaEO/7dxGQew==
   dependencies:
     "@types/bluebird" "*"
     "@types/continuation-local-storage" "*"
