@@ -1,7 +1,7 @@
 version: '3'
 services:
   node:
-    container_name: server
+    container_name: afreecatv_discord_server
     build: .
     ports:
       - "7270:7270"
