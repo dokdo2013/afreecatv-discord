@@ -1,0 +1,31 @@
+version: '3'
+services:
+  node:
+    container_name: server
+    build: .
+    ports:
+      - "7270:7270"
+    environment:
+      - TZ=Asia/Seoul
+  mariadb:
+    image: mariadb:lts
+    ports:
+      - "33060:3306"
+    volumes:
+      - ./db/conf.d:/etc/mysql/conf.d
+      - ./db/data:/var/lib/mysql
+      - ./db/initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_PORT: 3306
+      MYSQL_ROOT_PASSWORD: dokdo2013!
+      MYSQL_DATABASE: afreecatv_discord
+      MYSQL_USER: afreecatv_discord
+      MYSQL_PASSWORD: dokdo2013!
+    restart: always
+  redis:
+    image: redis:latest
+    hostname: redis
+    ports:
+      - "63790:6379"
+    restart: always
