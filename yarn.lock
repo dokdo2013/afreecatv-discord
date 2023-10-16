@@ -4288,10 +4288,10 @@ makeerror@1.0.12:
   dependencies:
     tmpl "1.0.5"
 
-mariadb@3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/mariadb/-/mariadb-3.2.1.tgz#5d7416d2e43a0565b4d2ac83f825a7c62f8be21f"
-  integrity sha512-EWCsvu8IwK5WRYPJ9iRekFiBfHfKB/wBcUwAzbhQKhSc6ivbvLcO/cktkYTCz3HVoGNYVWhBN38485Cq3qMSbQ==
+mariadb@3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/mariadb/-/mariadb-3.2.2.tgz#320a991c708c737e5ddeefa1852ddf925f2dcd8c"
+  integrity sha512-9ClJCFsLcK7WnPXVxuKGd7p0CBvNch3i5nwAf1HEqERj7RV60DG/0dJu4DfO33gpYQd9Cr4jq17O76/2VjSbkg==
   dependencies:
     "@types/geojson" "^7946.0.10"
     "@types/node" "^17.0.45"
