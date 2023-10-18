@@ -33,7 +33,7 @@
     "@sentry/minimal": "6.19.7",
     "@sentry/node": "7.74.1",
     "@sentry/tracing": "7.74.1",
-    "@types/sequelize": "4.28.16",
+    "@types/sequelize": "4.28.17",
     "axios": "1.5.1",
     "ioredis": "5.3.2",
     "jsonwebtoken": "^8.5.1",
