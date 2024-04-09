@@ -38,7 +38,7 @@
     "ioredis": "5.3.2",
     "jsonwebtoken": "^8.5.1",
     "mariadb": "3.2.3",
-    "mysql2": "2.3.3",
+    "mysql2": "3.9.4",
     "nest-raven": "9.2.0",
     "reflect-metadata": "0.2.1",
     "rimraf": "3.0.2",
